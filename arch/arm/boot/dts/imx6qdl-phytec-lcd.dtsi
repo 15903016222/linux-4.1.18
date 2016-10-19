@@ -38,15 +38,15 @@
 
 	lvds-channel@0 {
 		fsl,data-mapping = "spwg";
-		fsl,data-width = <18>;
+		fsl,data-width = <24>;
 		status = "disabled";
 
 		display-timings {
 			native-mode = <&timing0>;
 			timing0: ETM0700G0DH6 {
-				clock-frequency = <33260000>;
+				clock-frequency = <40000000>;
 				hactive = <800>;
-				vactive = <480>;
+				vactive = <600>;
 				hback-porch = <216>;
 				hfront-porch = <40>;
 				hsync-len = <128>;
