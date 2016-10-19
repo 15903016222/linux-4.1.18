@@ -37,7 +37,7 @@
 			regulator-min-microvolt = <5000000>;
 			regulator-max-microvolt = <5000000>;
 			gpio = <&gpio4 15 0>;
-			enable-active-high;
+			enable-active-low;
 		};
 
 		reg_usb_h1_vbus: regulator@1 {
@@ -47,7 +47,6 @@
 			regulator-min-microvolt = <5000000>;
 			regulator-max-microvolt = <5000000>;
 			gpio = <&gpio1 0 0>;
-			enable-active-high;
 		};
 	};
 
