@@ -404,7 +404,7 @@
 
 &usbotg {
 	status = "okay";
-	dr_mode = "peripheral";
+	dr_mode = "otg";
 };
 
 /* SD1 on baseboard */
