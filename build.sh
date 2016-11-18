@@ -9,12 +9,10 @@ configPath="./configs/zImage.config"
 
 if [ ! -f "./.config" ]; then
 	cp $configPath ./.config
-	if [ -f "./.config" ]; then
-		make CROSS_COMPILE=$crossPath  ARCH=arm zImage
-	else 
-		echo "No .config file."
+	if [ $? != 0 ]; then
+		exit 1
 	fi
-else
-	make CROSS_COMPILE=$crossPath  ARCH=arm zImage
 fi
+
+make CROSS_COMPILE=$crossPath  ARCH=arm zImage
 
