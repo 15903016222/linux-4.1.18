@@ -1018,6 +1018,7 @@ static int spi_imx_transfer(struct spi_device *spi,
 	int ret;
 	struct spi_imx_data *spi_imx = spi_master_get_devdata(spi->master);
 
+	/*
 	if (spi_imx->bitbang.master->can_dma &&
 	    spi_imx_can_dma(spi_imx->bitbang.master, spi, transfer)) {
 		spi_imx->usedma = true;
@@ -1025,7 +1026,9 @@ static int spi_imx_transfer(struct spi_device *spi,
 		if (ret != -EAGAIN)
 			return ret;
 	}
+	*/
 	spi_imx->usedma = false;
+
 
 	return spi_imx_pio_transfer(spi, transfer);
 }
