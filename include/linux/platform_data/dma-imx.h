@@ -42,6 +42,7 @@ enum sdma_peripheral_type {
 	IMX_DMATYPE_SSI_DUAL,	/* SSI Dual FIFO */
 	IMX_DMATYPE_ASRC_SP,	/* Shared ASRC */
 	IMX_DMATYPE_SAI,	/* SAI */
+	IMX_DMATYPE_HDMI,	/* HDMI Audio */
 };
 
 enum imx_dma_prio {
@@ -55,6 +56,8 @@ struct imx_dma_data {
 	int dma_request2; /* secondary DMA request line */
 	enum sdma_peripheral_type peripheral_type;
 	int priority;
+	bool src_dualfifo;
+	bool dst_dualfifo;
 };
 
 static inline int imx_dma_is_ipu(struct dma_chan *chan)

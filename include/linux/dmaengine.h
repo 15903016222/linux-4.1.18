@@ -676,6 +676,7 @@ struct dma_device {
 	int (*device_resume)(struct dma_chan *chan);
 	int (*device_terminate_all)(struct dma_chan *chan);
 
+	enum dma_status (*device_wait_tasklet)(struct dma_chan *chan);
 	enum dma_status (*device_tx_status)(struct dma_chan *chan,
 					    dma_cookie_t cookie,
 					    struct dma_tx_state *txstate);
